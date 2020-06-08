@@ -18,3 +18,22 @@ logging.config.fileConfig(fname='conf/log.conf',
                           defaults={'logfilename': path},
                           disable_existing_loggers=False)
 ```
+
+## Running and output
+
+```sh
+python3 logging_example.py
+2020-06-08 17:30:52,626 - dev - WARNING - warn message
+2020-06-08 17:30:52,626 - dev - ERROR - error message
+2020-06-08 17:30:52,626 - dev - CRITICAL - critical message
+```
+
+And here is the log file entry which is recorded under `logs/example.log`
+
+```sh
+2020-06-08 17:30:52,625 - dev - DEBUG - debug message
+2020-06-08 17:30:52,626 - dev - INFO - info message
+2020-06-08 17:30:52,626 - dev - WARNING - warn message
+2020-06-08 17:30:52,626 - dev - ERROR - error message
+2020-06-08 17:30:52,626 - dev - CRITICAL - critical message
+```
